@@ -13,13 +13,11 @@ public class Main {
                 Session session = sessionFactory.openSession();
                 session.beginTransaction();
 
-                User user = new User();
-                user.setName("Ali");
+                User user = User.builder().name("Doniyor").lastname("Khasanov").age(17).email("gmail@doniyor.com").password("googler.dev").build();
 
                 session.save(user);
                 session.getTransaction().commit();
                 session.close();
-
                 System.out.println("User saved!");
 
 
