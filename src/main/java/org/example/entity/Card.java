@@ -1,33 +1,24 @@
 package org.example.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
-@Data
+
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 
-@Entity
-
-
 public class Card {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cardId;
     private String cardNumber;
     private String cardPassword;
     private String cardholderName;
     private LocalDateTime createDate;
-    @Embedded
-    private CardDetail cardDetail;
+    private CardType cardType;
     private LocalDateTime expiryDate;
-
-    @ManyToOne
-    @JoinColumn(name = "user_id") // foreign key column nomi
-    private User user;
 }
+
+
