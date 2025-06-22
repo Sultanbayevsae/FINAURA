@@ -12,22 +12,6 @@ public class Main {
         dbManager.createTable("CREATE TABLE IF NOT EXISTS cards(cardId SERIAL PRIMARY KEY, cardNumber VARCHAR(255), cardPassword VARCHAR(255), cardholderName VARCHAR(255), createDate TIMESTAMP, cardDetail VARCHAR(255), expiryDate TIMESTAMP, user_id BIGINT)");
     }
     public static void main(String[] args) {
-
-<<<<<<< HEAD
-=======
-                SessionFactory sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
-
-                Session session = sessionFactory.openSession();
-                session.beginTransaction();
-
-                User user = User.builder().name("Doniyor").lastname("Khasanov").age(17).email("gmail@doniyor.com").password("googler.dev").build();
-
-                session.save(user);
-                session.getTransaction().commit();
-                session.close();
-                System.out.println("User saved!");
-
-
->>>>>>> d09eb34381d28a6febf995e9c3be7de89607e336
+        System.out.println("Initial setup");
     }
 }
