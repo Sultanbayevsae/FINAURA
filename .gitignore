@@ -12,6 +12,7 @@ target/
 *.iml
 *.ipr
 **/resources/
+**/Module 7
 
 ### Eclipse ###
 .apt_generated
